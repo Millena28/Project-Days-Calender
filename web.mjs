@@ -6,6 +6,15 @@
 import { getGreeting } from "./common.mjs";
 import daysData from "./days.json" with { type: "json" };
 
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const submitBtn = document.getElementById('submit-btn');
+const monthDropdown = document.getElementById('month-select');
+const displayDate = document.getElementById('display-date');
+const showCalender = document.getElementById('show-calender');
+
+
+
 window.onload = function() {
     document.querySelector("body").innerText = `${getGreeting()} - there are ${daysData.length} known days`;
 }
