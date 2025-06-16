@@ -14,7 +14,6 @@ const displayDate = document.getElementById('display-date');
 const showCalender = document.getElementById('show-calender');
 
 
-
 window.onload = function() {
-    document.querySelector("body").innerText = `${getGreeting()} - there are ${daysData.length} known days`;
+    // document.querySelector("body").innerText = `${getGreeting()} - there are ${daysData.length} known days`;
 }
