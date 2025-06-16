@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
     <head>
+        <meta charset="UTF-8">
+        <title>Calendar Of Years</title>
         <script type="module" src="common.mjs"></script>
         <script type="module" src="web.mjs"></script>
     </head>
     <body>
+        <div id="controls"> 
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+
+            <select id="month"></select>
+            <input id="year" type="number" min="1100" max="2100"/>
+            <button id="submit">Go</button>
+        </div>
+
+        <div id="Calendar"></div>
+        <div id="chosen-date" style="margin-top:20px; font-weight:bold;"></div>
     </body>
 </html>
