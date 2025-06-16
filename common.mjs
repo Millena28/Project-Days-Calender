@@ -57,7 +57,7 @@ export const specificDayOfMonth = (year, monthName, dayName, occurrence) => {
 
     if (monthIndex === null || dayIndex === -1) return null;
 
-    if (occurrence.toLowerCase() === 'last') {
+    if (occurrence === 'last') {
         return getLastWeekdayOfMonth(year, monthIndex, dayIndex);
     }
 
