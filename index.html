@@ -6,6 +6,33 @@
         <title>Days Calender</title>
         <script type="module" src="common.mjs"></script>
         <script type="module" src="web.mjs"></script>
+        <style>
+        main {
+            width: 80%;
+            margin: 0 auto;
+        }
+        section#week-days, #show-calender {
+            background: grey;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 5px;
+        }
+        #week-days .day, #show-calender .day {
+            text-align: center;
+            border: 1px solid black;
+            padding: 16px;
+        }
+        #nav {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+        .commemorative-day {
+            background-color: gold;
+            font-weight: bold;
+        }
+
+    </style>
     </head>
     <body>
         <main>
@@ -13,14 +40,24 @@
 
             <form action="">
                 <fieldset>
-                    <button id="prev-btn">Prev</button>
+                    <button type="button" id="prev-btn">Prev</button>
+                    <input type="text" id="year-input" placeholder="Enter a year" required>
+
                     <label for="">Select Month
                         <select name="month" id="month-select"></select>
                     </label>
-                    <button id="prev-btn">Next</button>
-                    <button id="submit-btn">Submit</button>
+                    <button type="button" id="next-btn">Next</button>
                 </fieldset>
                 <h2 id="display-date"></h2>
+                <section id="week-days">
+                    <div class="day">Monday</div>
+                    <div class="day">Tuesday</div>
+                    <div class="day">Wednesday</div>
+                    <div class="day">Thursday</div>
+                    <div class="day">Friday</div>
+                    <div class="day">Saturday</div>
+                    <div class="day">Sunday</div>
+                </section>
                 <section id="show-calender"></section>
             </form>
         </main>
