@@ -138,6 +138,16 @@ nextBtn.addEventListener('click', (e) => {
 
 monthDropdown.addEventListener('change', displayCalender);
 
+yearInput.addEventListener('change', displayCalender);
+yearInput.addEventListener('blur', displayCalender);
+yearInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        displayCalender();
+    }
+});
+
+
 window.onload = function() {
     populateMonthDropdown();
     displayCalender();
