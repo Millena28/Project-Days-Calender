@@ -27,6 +27,7 @@ function initControls() {
       currentDate.setMonth(currentDate.getMonth() + 1);
       renderCalendar(currentDate);
     });
+
      // Month/Year selector + Go button
   const monthEl = document.getElementById("month");
   ["January","February","March","April","May","June","July","August","September","October","November","December"]
