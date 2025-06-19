@@ -7,14 +7,17 @@
         <script type="module" src="web.mjs"></script>
     </head>
     <body>
-        <div id="controls"> 
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
+        <!-- <div id="greeting"></div> -->
+        <div id="controls"></div>
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
 
-            <select id="month"></select>
-            <input id="year" type="number" min="1100" max="2100"/>
-            <button id="submit">Go</button>
-        </div>
+        <select id="month" required>
+            option value="" disabled selected hidden>Select Month</option>
+        </select>
+        <input id="year" type="number" min="1100" max="2100"/>
+        <button id="submit">Go</button>
+        
 
         <div id="Calendar"></div>
         <div id="chosen-date" style="margin-top:20px; font-weight:bold;"></div>
