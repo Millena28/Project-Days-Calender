@@ -4,7 +4,7 @@ export function getGreeting() {
     return "Hello";
 }
 
-const getMonthIndex = (monthName) => {
+export const getMonthIndex = (monthName) => {
     const monthIndex = new Date(`${monthName}, 1, 2020`).getMonth();
 
     // console.log(monthIndex);
@@ -13,7 +13,7 @@ const getMonthIndex = (monthName) => {
 
 getMonthIndex('December');
 
-const getDayIndex = (dayName) => {
+export const getDayIndex = (dayName) => {
     const dayIndex = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     // console.log(dayIndex.indexOf(dayName));
@@ -22,7 +22,7 @@ const getDayIndex = (dayName) => {
 
 getDayIndex('Tuesday');
 
-const getOccurrenceNumber = (occurrence) => {
+export const getOccurrenceNumber = (occurrence) => {
     const map = { first: 1, second: 2, third: 3, fourth: 4, fifth: 5 };
 
     return map[occurrence] ?? null;
@@ -30,7 +30,7 @@ const getOccurrenceNumber = (occurrence) => {
 
 // console.log(getOccurrenceNumber('second'));
 
-const getFirstWeekdayOfMonth = (year, monthIndex, dayIndex) => {
+export const getFirstWeekdayOfMonth = (year, monthIndex, dayIndex) => {
     for ( let day = 1; day <= 7; day++ ) {
         const date = new Date(year, monthIndex, day);
 
@@ -41,7 +41,7 @@ const getFirstWeekdayOfMonth = (year, monthIndex, dayIndex) => {
 
 // console.log(getFirstWeekdayOfMonth(2020))
 
-const getLastWeekdayOfMonth = (year, monthIndex, dayIndex) => {
+export const getLastWeekdayOfMonth = (year, monthIndex, dayIndex) => {
     for (let day = 31; day >= 1; day--) {
         const date = new Date(year, monthIndex, day);
         if (date.getMonth() !== monthIndex) break;
