@@ -11,6 +11,12 @@
             width: 80%;
             margin: 0 auto;
         }
+        form fieldset {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-evenly;
+            align-items: center;
+        }
         section#week-days, #show-calender {
             background: grey;
             display: grid;
@@ -41,25 +47,35 @@
             <form action="">
                 <fieldset>
                     <button type="button" id="prev-btn">Prev</button>
-                    <input type="text" id="year-input" placeholder="Enter a year" required>
+                    <input
+                        type="text"
+                        id="year-input"
+                        placeholder="Enter a year"
+                        required
+                        pattern="\d{4}"
+                        maxlength="4"
+                        minlength="4"
+                        inputmode="numeric"
+                        title="Please enter a valid 4-digit year (e.g., 2025)"
+                    />
 
-                    <label for="">Select Month
-                        <select name="month" id="month-select"></select>
+                    <label for="">Select Month:
+                        <select name="month" id="month-select" required></select>
                     </label>
                     <button type="button" id="next-btn">Next</button>
                 </fieldset>
-                <h2 id="display-date"></h2>
-                <section id="week-days">
-                    <div class="day">Monday</div>
-                    <div class="day">Tuesday</div>
-                    <div class="day">Wednesday</div>
-                    <div class="day">Thursday</div>
-                    <div class="day">Friday</div>
-                    <div class="day">Saturday</div>
-                    <div class="day">Sunday</div>
-                </section>
-                <section id="show-calender"></section>
             </form>
+            <h2 id="display-date"></h2>
+            <section id="week-days">
+                <div class="day">Monday</div>
+                <div class="day">Tuesday</div>
+                <div class="day">Wednesday</div>
+                <div class="day">Thursday</div>
+                <div class="day">Friday</div>
+                <div class="day">Saturday</div>
+                <div class="day">Sunday</div>
+            </section>
+            <section id="show-calender"></section>
         </main>
     </body>
 </html>

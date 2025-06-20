@@ -5,30 +5,22 @@ export function getGreeting() {
 }
 
 export const getMonthIndex = (monthName) => {
-    const monthIndex = new Date(`${monthName}, 1, 2020`).getMonth();
-
-    // console.log(monthIndex);
-    return monthIndex;
-}
-
-getMonthIndex('December');
+    const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    return months.indexOf(monthName);
+};
 
 export const getDayIndex = (dayName) => {
     const dayIndex = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    // console.log(dayIndex.indexOf(dayName));
     return dayIndex.indexOf(dayName);
 }
 
-getDayIndex('Tuesday');
-
 export const getOccurrenceNumber = (occurrence) => {
     const map = { first: 1, second: 2, third: 3, fourth: 4, fifth: 5 };
-
     return map[occurrence] ?? null;
 }
-
-// console.log(getOccurrenceNumber('second'));
 
 export const getFirstWeekdayOfMonth = (year, monthIndex, dayIndex) => {
     for ( let day = 1; day <= 7; day++ ) {
@@ -38,8 +30,6 @@ export const getFirstWeekdayOfMonth = (year, monthIndex, dayIndex) => {
     }
     return null;
 }
-
-// console.log(getFirstWeekdayOfMonth(2020))
 
 export const getLastWeekdayOfMonth = (year, monthIndex, dayIndex) => {
     for (let day = 31; day >= 1; day--) {
@@ -76,8 +66,3 @@ export const specificDayOfMonth = (year, monthName, dayName, occurrence) => {
     
     return targetDate;
 }
-
-
-console.log(specificDayOfMonth(2025, "March", "Tuesday", "second")); // Expected: 2025-03-11
-console.log(specificDayOfMonth(2024, "February", "Monday", "fifth")); // Expected: null
-console.log(specificDayOfMonth(2025, "May", "Friday", "last")); // Expected: 2025-05-30

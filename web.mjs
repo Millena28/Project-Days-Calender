@@ -138,6 +138,9 @@ nextBtn.addEventListener('click', (e) => {
 
 monthDropdown.addEventListener('change', displayCalender);
 
+yearInput.addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/[^\d]/g, '');
+});
 yearInput.addEventListener('change', displayCalender);
 yearInput.addEventListener('blur', displayCalender);
 yearInput.addEventListener('keydown', (e) => {
